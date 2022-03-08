@@ -1,4 +1,5 @@
 import { StyleSheet, SafeAreaView, StatusBar } from "react-native";
+import Post from "./src/components/Post";
 import HomeScreen from "./src/screens/Home";
 
 export default function App() {
@@ -6,7 +7,7 @@ export default function App() {
     <>
       <StatusBar />
       <SafeAreaView>
-        <HomeScreen />
+        <Post />
       </SafeAreaView>
     </>
   );
