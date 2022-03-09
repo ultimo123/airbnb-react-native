@@ -3,10 +3,13 @@ import { View, ImageBackground, Text, Pressable } from "react-native";
 import styles from "./styles";
 import { Feather } from "@expo/vector-icons";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Pressable style={styles.searchButton} onPress={() => null}>
+      <Pressable
+        style={styles.searchButton}
+        onPress={() => navigation.navigate("Destination Search")}
+      >
         <Feather name="search" size={25} color="#f15454" />
         <Text style={styles.searchButtonText}>Where are you going?</Text>
       </Pressable>
@@ -19,7 +22,7 @@ const HomeScreen = () => {
 
         <Pressable
           style={styles.button}
-          onPress={() => console.warn("Explore Btn clicked")}
+          onPress={() => navigation.navigate("Destination Search")}
         >
           <Text style={styles.buttonText}>Explore nearby stays</Text>
         </Pressable>
